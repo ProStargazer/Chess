@@ -1,5 +1,5 @@
 package Game;
-
+//import MoveCheck.*;
 public class Game {
 	public static void main(String[] args) {
 		Board gameBoard = new Board();
@@ -11,10 +11,13 @@ public class Game {
 				if(gameBoard.getBox(j, i).piece != null){
 				System.out.print("|"+gameBoard.getBox(j, i).piece.getName()+"-"+gameBoard.getBox(j, i).piece.Player);
 			}else{
-				System.out.print("| ");
+				System.out.print("|       ");
 			}
 			}
 			System.out.println("|");
 		}
+	}
+	public void move(){
+	//	MoveChecker();
 	}
 }

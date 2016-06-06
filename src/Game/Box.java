@@ -2,7 +2,7 @@ package Game;
 
 import Chess.*;
 
-class Box {
+public class Box {
 	int x;
 	int y;
 	Piece piece;

@@ -17,10 +17,10 @@ public class Pawn extends Piece {
 			int toY) {
 		if (super.isValid(gameBoard, fromX, fromY, toX, toY) == false)
 			return false;
-		if (this.Player == "White" && (toY - fromY == -1)) {
+		if (this.Player == "White" && (toY - fromY == 1)) {
 			return true;
 		}
-		if (this.Player == "Black" && (toY - fromY == 1)) {
+		if (this.Player == "Black" && (toY - fromY == -1)) {
 			return true;
 		}
 		return false;
