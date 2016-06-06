@@ -20,6 +20,6 @@ public class MoveChecker{
 		this.fromY = fromY;
 		this.gameBoard = gameBoard;
 		
-		blockedMove(gameBoard,fromX,fromY,toX,toY);
+		//BlockedMove(gameBoard,fromX,fromY,toX,toY);
 	}
 }

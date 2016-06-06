@@ -5,7 +5,7 @@ public class Game {
 		Board gameBoard = new Board();
 		gameBoard.initBoard();
 		gameBoard.mapBoard();
-
+		//gameBoard.blockedMove();
 		for (int i = 0; i < gameBoard.returnSize(); i++) {
 			for (int j = 0; j < gameBoard.returnSize(); j++) {
 				if(gameBoard.getBox(j, i).piece != null){
@@ -18,6 +18,6 @@ public class Game {
 		}
 	}
 	public void move(){
-	//	MoveChecker();
+	
 	}
 }
