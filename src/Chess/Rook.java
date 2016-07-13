@@ -5,8 +5,8 @@ import Game.Board;
 //import Game.*;
 public class Rook extends Piece {
 
-	public Rook(int x, int y, String Player) {
-		super(x, y, Player);
+	public Rook(String Player) {
+		super(Player);
 
 		this.setName("R");
 		// TODO Auto-generated constructor stub

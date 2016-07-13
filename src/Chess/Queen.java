@@ -5,8 +5,8 @@ import Game.Board;
 //import Game.*;
 public class Queen extends Piece {
 
-	public Queen(int x, int y, String Player) {
-		super(x, y, Player);
+	public Queen(String Player) {
+		super(Player);
 		this.setName("Q");
 		// TODO Auto-generated constructor stub
 	}
@@ -17,7 +17,7 @@ public class Queen extends Piece {
 		if (super.isValid(gameBoard, fromX, fromY, toX, toY) == false)
 			return false;
 
-		if (toX - fromX == toY - fromY) {
+		if (Math.abs(toX - fromX) == Math.abs(toY - fromY)) {
 			return true;
 		}
 		if (toX == fromX || toY == fromY) {

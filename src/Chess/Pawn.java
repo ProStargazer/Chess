@@ -5,8 +5,8 @@ import Game.Board;
 //import Game.*;
 public class Pawn extends Piece {
 
-	public Pawn(int x, int y, String Player) {
-		super(x, y, Player);
+	public Pawn(String Player) {
+		super(Player);
 
 		this.setName("P");
 		// TODO Auto-generated constructor stub
@@ -15,12 +15,16 @@ public class Pawn extends Piece {
 	@Override
 	public boolean isValid(Board gameBoard, int fromX, int fromY, int toX,
 			int toY) {
-		if (super.isValid(gameBoard, fromX, fromY, toX, toY) == false)
+		if (super.isValid(gameBoard, fromX, fromY, toX, toY) == false){
+			
 			return false;
-		if (this.getPlayer() == "White" && (toY - fromY == 1)) {
+		}
+		if (this.getPlayer() == "White" && (fromY - toY == 1)) {
+			
 			return true;
 		}
-		if (this.getPlayer() == "Black" && (toY - fromY == -1)) {
+		if (this.getPlayer() == "Black" && (toY - fromY == 1)) {
+			
 			return true;
 		}
 		return false;

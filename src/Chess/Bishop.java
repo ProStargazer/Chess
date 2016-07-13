@@ -5,8 +5,8 @@ import Game.Board;
 //import Game.*;
 public class Bishop extends Piece{
 
-	public Bishop(int x, int y, String Player) {
-		super(x, y, Player);
+	public Bishop(String Player) {
+		super(Player);
 		this.setName("B");
 		// TODO Auto-generated constructor stub
 	}
@@ -16,7 +16,7 @@ public class Bishop extends Piece{
 			int toY) {
 		if (super.isValid(gameBoard, fromX, fromY, toX, toY) == false)
 			return false;
-		if (toX - fromX == toY - fromY) {
+		if (Math.abs(toX - fromX) == Math.abs(toY - fromY)) {
 			return true;
 		}
 		return false;

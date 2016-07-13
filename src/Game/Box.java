@@ -3,13 +3,11 @@ package Game;
 import Chess.*;
 
 public class Box {
-	int x;
-	int y;
+
 	private Piece piece;
 
-	public Box(int x, int y) {
-		this.x = x;
-		this.y = y;
+	public Box() {
+		
 		setPiece(null);
 	}
 
