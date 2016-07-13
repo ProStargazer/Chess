@@ -5,31 +5,36 @@ import Chess.*;
 public class Box {
 	int x;
 	int y;
-	Piece piece;
+	private Piece piece;
 
 	public Box(int x, int y) {
 		this.x = x;
 		this.y = y;
-		piece = null;
+		setPiece(null);
 	}
 
-	public void occupyBox(Piece piece) {
-		if (this.piece != null) {
-			this.piece.setPlay(true);
-		}
-		this.piece = piece;
+	public void occupyBox(Piece piece) {		
+		this.setPiece(piece);
 	}
 
 	public boolean isOccupied() {
-		if (piece != null) {
+		if (getPiece() != null) {
 			return true;
 		}
 		return false;
 	}
 
 	public Piece releaseBox() {
-		Piece releasedPiece = this.piece;
-		this.piece = null;
+		Piece releasedPiece = this.getPiece();
+		this.setPiece(null);
 		return releasedPiece;
+	}
+
+	public Piece getPiece() {
+		return piece;
+	}
+
+	public void setPiece(Piece piece) {
+		this.piece = piece;
 	}
 }

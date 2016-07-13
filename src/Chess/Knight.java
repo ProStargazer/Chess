@@ -7,7 +7,7 @@ public class Knight extends Piece {
 
 	public Knight(int x, int y, String Player) {
 		super(x, y, Player);
-		this.setName("N");
+		this.setName("K");
 		// TODO Auto-generated constructor stub
 	}
 	@Override
